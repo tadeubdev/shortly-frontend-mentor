@@ -40,12 +40,18 @@ body {
 }
 
 #navbar {
-    height: 150px;
+    height: 100px;
     display: flex;
-    padding: 40px 20px;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
     position: relative;
     user-select: none;
+    background-color: #fff;
+}
+
+#navbar-logo {
+    padding-top: 10px;
 }
 
 #navbar-menu span {
