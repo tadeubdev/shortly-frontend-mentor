@@ -5,22 +5,103 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
     --primary-color: hsl(180, 66%, 49%);
-    --seconday-color: hsl(257, 27%, 26%);
+    --secondary-color: hsl(257, 27%, 26%);
     --light-dark: hsl(0, 0%, 75%);
     --secondary-dark: hsl(257, 7%, 63%);
     --dark-blue: hsl(255, 11%, 22%);
     --dark-violet: hsl(260, 8%, 14%);
 }
 
+.btn {
+    background: #ddd;
+    color: #fff !important;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
 
-.attribution  {
+.btn-green {
+    background-color: var(--primary-color);
+    color: var(--light-dark);
+}
+
+#navbar {
+    height: 150px;
+    display: flex;
+    padding: 40px 20px;
+    justify-content: space-between;
+    position: relative;
+    user-select: none;
+}
+
+#navbar-menu span {
+    display: block;
+    content: ' ';
+    width: 25px;
+    height: 4px;
+    margin-bottom: 6px;
+    background: var(--secondary-dark);
+}
+
+#navbar-links {
+    display: none;
+    position: absolute;
+    width: 93%;
+    top: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+}
+
+#navbar-links ul {
+    padding: 0 20px;
+}
+
+#navbar-links li {
+    padding: 0;
+    list-style-type: none;
+}
+
+#navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+#navbar-links li.navbar-separator {
+    content: ' ';
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+#navbar-links .btn {
+    margin: 15px 0 30px 0;
+}
+
+.attribution {
     font-size: 11px; text-align: center; 
 }
 
