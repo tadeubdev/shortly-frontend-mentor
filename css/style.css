@@ -370,6 +370,31 @@ body {
     font-size: 16px;
 }
 
+#main-boost {
+    height: 250px;
+    background-color: var(--secondary-color);
+    background-image: url(../images/bg-boost-mobile.svg);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#main-boost-title {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#main-boost-action {
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 40px;
+}
+
 .attribution {
     font-size: 11px; text-align: center; 
 }
