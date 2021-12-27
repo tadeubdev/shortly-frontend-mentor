@@ -3,7 +3,8 @@
     --secondary-color: hsl(257, 27%, 26%);
     --light-dark: hsl(0, 0%, 75%);
     --secondary-dark: hsl(257, 7%, 63%);
-    --background: hsl(230deg 25% 95%);
+    --background: hsl(230deg 13% 91%);
+    --background-panel: #fff;
     --dark-blue: hsl(255, 11%, 22%);
     --dark-violet: hsl(260, 8%, 14%);
     --danger: #f97272;
@@ -20,7 +21,7 @@ html, body {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: --background;
+    background-color: var(--background);
 }
 
 .btn {
@@ -231,7 +232,7 @@ body {
 
 .shorten-result-title {
     padding: 10px 20px 0px 20px;
-    border-bottom: 1px solid var(--background);
+    border-bottom: 1px solid var(--background-panel);
     font-size: 18px;
     font-weight: 100;
     color: var(--secondary-color);
@@ -260,6 +261,80 @@ body {
     padding: 15px;
     font-weight: bold;
     border-radius: 6px;
+}
+
+#main-statistics {
+    width: 90%;
+    margin: 80px auto 60px auto;
+    padding: 20px;
+    background: var(--background-panel);
+    text-align: center;
+}
+
+#main-statistics h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+#main-statistics p {
+    padding: 0 40px;
+    color: var(--dark-blue);
+    font-size: 16px;
+}
+
+.main-timeline-item {
+    width: 90%;
+    margin: 90px auto;
+    text-align: center;
+    background-color: var(--background-panel);
+    margin-bottom: 60px;
+    position: relative;
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.main-timeline-item:before {
+    content: ' ';
+    display: block;
+    width: 7px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: -150px;
+    z-index: -1;
+    background-color: var(--primary-color);
+}
+
+.main-timeline-item:first-child:before {
+    display: none;
+}
+
+.main-timeline-icon {
+    background-color: var(--secondary-color);
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.main-timeline-title {
+    margin-bottom: 0px;
+    font-size: 26px;
+}
+
+.main-timeline-text {
+    color: var(--dark-blue);
+    font-size: 16px;
 }
 
 .attribution {
