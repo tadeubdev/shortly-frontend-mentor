@@ -371,7 +371,7 @@ body {
     font-size: 16px;
 }
 
-#main-boost {
+#boost {
     height: 250px;
     background-color: var(--secondary-color);
     background-image: url(../images/bg-boost-mobile.svg);
@@ -384,13 +384,13 @@ body {
     text-align: center;
 }
 
-#main-boost-title {
+#boost-title {
     font-size: 30px;
     color: #fff;
     margin-bottom: 5px;
 }
 
-#main-boost-action {
+#boost-action {
     font-size: 20px;
     padding: 15px 40px;
     border-radius: 40px;

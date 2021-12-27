@@ -46,4 +46,12 @@
         padding: 0;
         text-align: left;
     }
+    #main-form,
+    #shorten-results {
+        margin: 0;
+    }
+    #main-statistics {
+        padding: 20px 0;
+        width: 100%;
+    }
 }
