@@ -1,4 +1,7 @@
 @media screen and (min-width: 981px) {
+    :root {
+        --background: hsl(0, 0%, 95%);
+    }
     .container {
         width: 980px;
         margin: auto;
@@ -51,7 +54,49 @@
         margin: 0;
     }
     #main-statistics {
-        padding: 20px 0;
+        padding: 65px 0;
         width: 100%;
+    }
+    #main-timeline {
+        display: flex;
+        flex-direction: row;
+        height: 360px;
+        margin-bottom: 180px;
+    }
+    .main-timeline-item {
+        margin: 10px;
+    }
+    .main-timeline-item:nth-child(2) {
+        margin-top: 50px;
+        height: 340px;
+    }
+    .main-timeline-item:nth-child(3) {
+        margin-top: 100px;
+        height: 320px;
+    }
+    .main-timeline-item:before {
+        width: 20px;
+        height: 7px;
+        left: -330px;
+        right: 0;
+        margin: auto;
+        margin-top: 100px;
+    }
+    .main-timeline-item:nth-child(3):before {
+        margin-top: 50px;
+    }
+    .main-timeline-icon:after {
+        top: -80px;
+        left: -150px;
+        right: 0;
+    }
+    .main-timeline-icon:before {
+        top: -80px;
+        left: -150px;
+        right: 0;
+    }
+    .main-timeline-icon img {
+        left: -150px;
+        right: 0;
     }
 }
