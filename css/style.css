@@ -81,15 +81,12 @@ body {
     right: 0;
     margin: auto;
     border-radius: 6px;
+    padding: 20px 20px 0 20px;
     background-color: var(--secondary-color);
 }
 
 #navbar-links.active {
     display: block;
-}
-
-#navbar-links ul {
-    padding: 0 20px;
 }
 
 #navbar-links li {
