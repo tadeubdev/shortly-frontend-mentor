@@ -40,22 +40,29 @@
   <main id="main" role="main">
     <div class="container">
       <section id="main-header">
-        <img src="./images/illustration-working.svg" alt="Illustration working" width="100%" />
-        <h1>More than just shorter links</h1>
-        <h5>
+        <div id="main-header-image">
+          <img src="./images/illustration-working.svg" alt="Illustration working" width="100%" />
+        </div>
+        <h1 id="main-header-title">
+          More than just shorter links
+        </h1>
+        <h5 id="main-header-subtitle">
           Build your brand’s recognition and get detailed insights 
           on how your links are performing.
         </h5>
-        <p>
+        <p id="main-header-footer">
           <button class="btn btn-green">
             Get Started
           </button>
         </p>
       </section>
 
-      <form id="main-form">
+      <form id="main-form" class="is-empty">
         <input type="text" id="url-to-shorten" name="url-to-shorten" placeholder="Shorten a link here..." />
-        <button type="submit" class="btn btn-green">Shorten it!</button>
+        <p id="main-form-input-alert">
+          Please add a link
+        </p>
+        <span class="btn btn-green">Shorten it!</span>
       </form>
 
       <div id="shorten-results">
@@ -70,8 +77,31 @@
             <button class="btn btn-green btn-block">
               Copy
             </button>
+          </div>
+        </div>
+        <div class="shorten-result">
+          <div class="shorten-result-header">
+            <h5 class="shorten-result-title">https://google.com</h5>
+          </div>
+          <div class="shorten-result-body">
+            <a href="https://google.com" target="_blank">http://rel.ink/sf2sd3</a>
+          </div>
+          <div class="shorten-result-footer">
             <button class="btn btn-violet btn-block">
               Copied!
+            </button>
+          </div>
+        </div>
+        <div class="shorten-result">
+          <div class="shorten-result-header">
+            <h5 class="shorten-result-title">https://google.com</h5>
+          </div>
+          <div class="shorten-result-body">
+            <a href="https://google.com" target="_blank">http://rel.ink/sf2sd3</a>
+          </div>
+          <div class="shorten-result-footer">
+            <button class="btn btn-green btn-block">
+              Copy
             </button>
           </div>
         </div>
