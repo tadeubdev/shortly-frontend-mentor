@@ -84,6 +84,10 @@ body {
     background-color: var(--secondary-color);
 }
 
+#navbar-links.active {
+    display: block;
+}
+
 #navbar-links ul {
     padding: 0 20px;
 }
