@@ -48,7 +48,7 @@ body {
     color: var(--light-dark);
 }
 
-#navbar {
+#navbar .container {
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -119,14 +119,14 @@ body {
 
 #main-header-image {
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
 #main-header-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 50px;
+    object-fit: contain;
+    object-position: 50px center;
 }
 
 #main-header-title {

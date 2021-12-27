@@ -15,26 +15,28 @@
 <body>
   
   <nav id="navbar">
-    <div id="navbar-logo">
-      <a href="javascript:void(0);">
-        <img src="./images/logo.svg" alt="Shortly">
-      </a>
+    <div class="container">
+      <div id="navbar-logo">
+        <a href="javascript:void(0);">
+          <img src="./images/logo.svg" alt="Shortly">
+        </a>
+      </div>
+      <div id="navbar-menu">
+        <a href="javascript:void(0);">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <ul id="navbar-links">
+        <li><a href="javascript:void(0);">Features</a></li>
+        <li><a href="javascript:void(0);">Pricing</a></li>
+        <li><a href="javascript:void(0);">Resources</a></li>
+        <li class="navbar-separator"></li>
+        <li><a href="javascript:void(0);">Login</a></li>
+        <li><a href="javascript:void(0);" class="btn btn-green">Sign Up</a></li>
+      </ul>
     </div>
-    <div id="navbar-menu">
-      <a href="javascript:void(0);">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-    <ul id="navbar-links">
-      <li><a href="javascript:void(0);">Features</a></li>
-      <li><a href="javascript:void(0);">Pricing</a></li>
-      <li><a href="javascript:void(0);">Resources</a></li>
-      <li class="navbar-separator"></li>
-      <li><a href="javascript:void(0);">Login</a></li>
-      <li><a href="javascript:void(0);" class="btn btn-green">Sign Up</a></li>
-    </ul>
   </nav>
 
   <main id="main" role="main">
@@ -43,18 +45,20 @@
         <div id="main-header-image">
           <img src="./images/illustration-working.svg" alt="Illustration working" width="100%" />
         </div>
-        <h1 id="main-header-title">
-          More than just shorter links
-        </h1>
-        <h5 id="main-header-subtitle">
-          Build your brand’s recognition and get detailed insights 
-          on how your links are performing.
-        </h5>
-        <p id="main-header-footer">
-          <button class="btn btn-green">
-            Get Started
-          </button>
-        </p>
+        <div id="main-header-content">
+          <h1 id="main-header-title">
+            More than just shorter links
+          </h1>
+          <h5 id="main-header-subtitle">
+            Build your brand’s recognition and get detailed insights 
+            on how your links are performing.
+          </h5>
+          <p id="main-header-footer">
+            <button class="btn btn-green">
+              Get Started
+            </button>
+          </p>
+        </div>
       </section>
 
       <form id="main-form" class="is-empty">
