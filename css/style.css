@@ -305,6 +305,22 @@ body {
     border-radius: 6px;
 }
 
+.shorten-result-footer .btn-copied {
+    display: none;
+}
+
+.shorten-result-footer.copied .btn-copy-url {
+    display: block;
+}
+
+.shorten-result-footer.copied .btn-copied {
+    display: block;
+}
+
+.shorten-result-footer.copied .btn-copy-url {
+    display: none;
+}
+
 #main-statistics {
     width: 90%;
     margin: 80px auto 60px auto;

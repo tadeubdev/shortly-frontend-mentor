@@ -96,6 +96,32 @@ window.addEventListener('load', function () {
         document.querySelector('#main-form-submit').disabled = false;
     }
 
+    const insertShortenedUrl = (elmResult) => {
+        shortResultsContainer.prepend(elmResult);
+    }
+
+    const handleCopyValueToClipboard = (text) => {
+        if (!navigator.clipboard) {
+            return new Promise((resolve, reject) => {
+                reject('Your browser does not support clipboard');
+            });
+        }
+        return navigator.clipboard.writeText(text);
+    }
+
+    const handleCopyUrl = (event) => {
+        const clickedButton = event.target;
+        const clickedParent = clickedButton.parentNode;
+        const shortenUrl = clickedButton.parentNode.parentNode.querySelector('.shorten-result-body a').href;
+        
+        handleCopyValueToClipboard(shortenUrl).then(() => {
+            clickedParent.classList.add('copied');
+            setTimeout(() => clickedParent.classList.remove('copied'), 3 * 1000);
+        }).catch((error) => {
+            alert(error);
+        });
+    }
+
     const handleSubmitForm = (event) => {
         event.preventDefault();
         if (event.target.classList.contains('loading')) {
@@ -142,8 +168,13 @@ window.addEventListener('load', function () {
     });
 
     document.querySelector('#main-form').addEventListener('submit', handleSubmitForm);
-
-    function insertShortenedUrl(elmResult) {
-        shortResultsContainer.prepend(elmResult);
-    }
+    
+    (function handleAddEventoToBtnCopy() {
+        document.body.addEventListener('click', function (event) {
+            if (!event || !event.target || event.target.classList.contains('btn-copy-url') === false) {
+                return;
+            }
+            handleCopyUrl(event);
+        });
+    })();
 });
