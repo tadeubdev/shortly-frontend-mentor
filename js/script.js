@@ -52,11 +52,27 @@ window.addEventListener('load', function () {
         });
     }
 
-    const handleShortUrl = (urlToShorten) => {
-        const urlToShortenMethod = handleShortUrlTest(urlToShorten);
+    const handleShortUrlShrtco = async (urlToShorten) => {
+        return new Promise(async (resolve, reject) => {
+            await fetch(`https://api.shrtco.de/v2/shorten?url=${urlToShorten}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    return reject(data.error);
+                }
+                if (!data.ok) {
+                    return reject('Something went wrong');
+                }
+                resolve(data.result.full_short_link2);
+            });
+        });
+    }
 
+    const handleShortUrl = (urlToShorten) => {
+        const urlToShortenMethod = handleShortUrlShrtco;
+        // const urlToShortenMethod = handleShortUrlTest;
         return new Promise((resolve, reject) => {
-            urlToShortenMethod.then(resolve).catch(reject);
+            urlToShortenMethod(urlToShorten).then(resolve).catch(reject);
         });
     }
 
@@ -122,6 +138,10 @@ window.addEventListener('load', function () {
         });
     }
 
+    const clearUrlInput = () => {
+        document.querySelector('#url-to-shorten').value = '';
+    }
+
     const handleSubmitForm = (event) => {
         event.preventDefault();
         if (event.target.classList.contains('loading')) {
@@ -138,6 +158,7 @@ window.addEventListener('load', function () {
             const elmResult = mountNewShortenResult(urlToShorten, shortenUrl);
             insertShortenedUrl(elmResult);
             saveShortenUrlLocally(urlToShorten, shortenUrl);
+            clearUrlInput();
         }).catch(error => {
             updateFormError(error.message);
         }).finally(() => {
