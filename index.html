@@ -61,29 +61,38 @@
         </div>
       </section>
 
-      <form id="main-form" class="is-empty">
-        <input type="text" id="url-to-shorten" name="url-to-shorten" placeholder="Shorten a link here..." />
+      <form id="main-form">
+        <input type="url" id="url-to-shorten" name="url-to-shorten" placeholder="Shorten a link here..." required />
         <p id="main-form-input-alert">
           Please add a link
         </p>
-        <span class="btn btn-green">Shorten it!</span>
+        <button type="submit" id="main-form-submit" class="btn btn-green">Shorten it!</button>
+        <p id="main-form-error">
+          Ops! Something went wrong. Please try again.
+        </p>
       </form>
 
+      <div id="shorten-results-loading">
+        <h5>Please, wait a second!</h5>
+      </div>
+
       <div id="shorten-results">
-        <div class="shorten-result">
-          <div class="shorten-result-header">
-            <h5 class="shorten-result-title">https://google.com</h5>
+        <template id="shorten-result-template">
+          <div class="shorten-result">
+            <div class="shorten-result-header">
+              <h5 class="shorten-result-title">https://google.com</h5>
+            </div>
+            <div class="shorten-result-body">
+              <a href="https://google.com" target="_blank">http://rel.ink/sf2sd3</a>
+            </div>
+            <div class="shorten-result-footer">
+              <button class="btn btn-green btn-block">
+                Copy
+              </button>
+            </div>
           </div>
-          <div class="shorten-result-body">
-            <a href="https://google.com" target="_blank">http://rel.ink/sf2sd3</a>
-          </div>
-          <div class="shorten-result-footer">
-            <button class="btn btn-green btn-block">
-              Copy
-            </button>
-          </div>
-        </div>
-        <div class="shorten-result">
+        </template>
+        <!-- <div class="shorten-result">
           <div class="shorten-result-header">
             <h5 class="shorten-result-title">https://google.com</h5>
           </div>
@@ -95,20 +104,7 @@
               Copied!
             </button>
           </div>
-        </div>
-        <div class="shorten-result">
-          <div class="shorten-result-header">
-            <h5 class="shorten-result-title">https://google.com</h5>
-          </div>
-          <div class="shorten-result-body">
-            <a href="https://google.com" target="_blank">http://rel.ink/sf2sd3</a>
-          </div>
-          <div class="shorten-result-footer">
-            <button class="btn btn-green btn-block">
-              Copy
-            </button>
-          </div>
-        </div>
+        </div> -->
       </div>
 
       <section id="main-statistics">

@@ -148,6 +148,7 @@ body {
 
 #main-header-footer {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #main-header-footer button {
@@ -195,7 +196,7 @@ body {
     color: var(--secondary-dark);
 }
 
-#main-form  .btn {
+#main-form #main-form-submit {
     display: block;
     width: 100%;
     padding: 13px;
@@ -211,12 +212,48 @@ body {
     font-style: italic;
 }
 
-.is-empty #url-to-shorten {
+.empty #url-to-shorten {
     margin: 0;
     border-color: var(--danger);
 }
 
-.is-empty #main-form-input-alert {
+.empty #main-form-input-alert {
+    display: block;
+}
+
+#main-form-submit:disabled {
+    background-color: var(--secondary-dark);
+    color: #888 !important;
+    cursor: initial;
+}
+
+#shorten-results-loading {
+    display: none;
+    margin: auto;
+    width: 90%;
+    padding: 2px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    background-image: url(../images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#shorten-results-loading.active {
+    display: block;
+}
+
+#main-form-error {
+    display: none;
+    color: var(--danger);
+    margin: 15px 0 0 0;
+    font-style: italic;
+}
+
+#main-form-error.active {
     display: block;
 }
 

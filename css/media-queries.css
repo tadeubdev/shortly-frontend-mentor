@@ -53,6 +53,9 @@
     #shorten-results {
         margin: 0;
     }
+    #shorten-results-loading {
+        margin: 30px 0;
+    }
     #main-statistics {
         padding: 65px 0;
         width: 100%;
