@@ -99,4 +99,21 @@
         left: -150px;
         right: 0;
     }
+    #footer .container {
+        display: grid;
+        grid-template-columns: 260px 1fr 250px;
+    }
+    #footer li {
+        text-align: left;
+    }
+    #footer li h5 {
+        margin-top: 0px;
+    }
+    #footer-social {
+        margin-top: 0px !important;
+    }
+    #footer-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
