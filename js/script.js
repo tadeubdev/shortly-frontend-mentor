@@ -110,7 +110,7 @@ window.addEventListener('load', function () {
         setFormLoading(true);
         handleShortUrl(urlToShorten).then(shortenUrl => {
             const elmResult = mountNewShortenResult(urlToShorten, shortenUrl);
-            shortResultsContainer.appendChild(elmResult);
+            insertShortenedUrl(elmResult);
             saveShortenUrlLocally(urlToShorten, shortenUrl);
         }).catch(error => {
             updateFormError(error.message);
@@ -118,6 +118,18 @@ window.addEventListener('load', function () {
             setFormLoading(false);
         });
     }
+
+    (function mountSavedUrls(){
+        const savedData = localStorage.getItem('urls') || '[]';
+        let urls = JSON.parse(savedData);
+        if (!urls.length) {
+            return;
+        }
+        for (let url of urls) {
+            const elmResult = mountNewShortenResult(url[0], url[1]);
+            insertShortenedUrl(elmResult);
+        }
+    })();
 
     document.querySelector('#url-to-shorten').addEventListener('input', function () {
         const urlToShorten = this.value.trim();
@@ -130,4 +142,8 @@ window.addEventListener('load', function () {
     });
 
     document.querySelector('#main-form').addEventListener('submit', handleSubmitForm);
+
+    function insertShortenedUrl(elmResult) {
+        shortResultsContainer.prepend(elmResult);
+    }
 });
