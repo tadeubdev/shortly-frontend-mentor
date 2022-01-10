@@ -3,7 +3,7 @@
     --secondary-color: hsl(257, 27%, 26%);
     --light-dark: hsl(0, 0%, 75%);
     --secondary-dark: hsl(257, 7%, 63%);
-    --background: hsl(0, 0%, 97%);
+    --background: hsl(0deg 0% 95%);
     --background-panel: #fff;
     --dark-blue: hsl(255, 11%, 22%);
     --dark-violet: hsl(260, 8%, 14%);
@@ -48,6 +48,10 @@ body {
     color: var(--light-dark);
 }
 
+#navbar {
+    background-color: #fff;
+}
+
 #navbar .container {
     height: 100px;
     display: flex;
@@ -56,7 +60,6 @@ body {
     padding: 0 30px;
     position: relative;
     user-select: none;
-    background-color: #fff;
 }
 
 #navbar-logo {
